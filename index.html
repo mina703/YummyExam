@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yummy</title>
+    <link rel="icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div
+        class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <div class="loader"></div>
+    </div>
+
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li class="py-2 position-relative cursor-pointer" onclick="displaySearch()">Search</li>
+                    <li class="py-2 position-relative cursor-pointer" onclick="displayCategories(categoryArr)">Categories</li>
+                    <li class="py-2 position-relative cursor-pointer">Area</li>
+                    <li class="py-2 position-relative cursor-pointer" onclick="displayIng(categoryArr)">Ingredients</li>
+                    <li class="py-2 position-relative cursor-pointer">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="imgs/logo.png" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container d-none w-75 d-flex m-auto justify-content-center my-4" id="searchContainer">
+        <input onkeyup="getInputData()" id="searchBarByName" class="w-50 m-2 form-control" aria-label="Sizing example input" type="search">
+        <input onkeyup="getInputData()" id="searchBarByCharachter" class="w-50 m-2 form-control" aria-label="Sizing example input" type="search">
+
+    </div>
+    
+
+    <div class="position-relative container py-5">
+        <div>
+            <div class="row py-5 g-4 " id="rowData">
+            </div>
+        </div>
+    </div>
+<div id="closehamada" class="container d-none position-relative">
+    <div onclick="backToHome()" class="position-absolute top-0 start-100">
+        <button class="btn btn-outline-light"><i class="fa-xmark fa-solid" ></i></button>
+    </div>
+    <div id="mealDetails" class="row position-absolute top-0 start-0 w-100">
+    </div>
+</div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
